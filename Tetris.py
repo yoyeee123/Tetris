@@ -309,7 +309,6 @@ def game_loop():
     if current_block is None:  # 画布内不存在方块时
         if not is_paused:
             current_block = create_new_block()   # 绘制新方块
-            move_block(canvas, current_block)
             for i in range(ROW):      # 当某列排满，则游戏结束
                 for j in range(COL):
                     if (blocks_list[i][j] != '' and i <= 0) or (seconds <= 0):
